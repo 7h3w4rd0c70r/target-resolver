@@ -1,6 +1,6 @@
 {
   "name": "target-resolver",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "engines": {
@@ -8,6 +8,9 @@
   },
   "repository": {
     "url": "https://github.com/7h3w4rd0c70r/target-resolver"
+  },
+  "scripts": {
+    "build": "tsc"
   },
   "author": "Patrik Šimunič <patriksimunic@hotmail.com>",
   "license": "MIT",

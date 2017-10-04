@@ -1,4 +1,5 @@
 
 'use strict';
 
-module.exports = require('./dist/index');
+exports.Route = require('./dist/route');
+module.exports = require('./dist/resolver');
