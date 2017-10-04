@@ -17,8 +17,8 @@ const Resolver = function Resolver(routes: Array<IRoute> = [ ], options: IOption
 Resolver.prototype.resolve =
     function resolve(path: string, method: IMethod = 'ALL'): string|boolean {
         for (let i in this.routes) {
-            if (this.routes.isMatch(path, method)) {
-                return this.routes.getTarget()
+            if (this.routes[i].isMatch(path, method)) {
+                return this.routes[i].getTarget()
             }
         }
 

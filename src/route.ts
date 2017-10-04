@@ -11,7 +11,7 @@ const Route = function Route(route: IRoute) {
 }
 
 Route.prototype.isMatch =
-    function isMatch(path: string, method: IMethod = 'ALL') {
+    function isMatch(path: string, method: IMethod = 'ALL'): boolean {
         const routeParts: Array<string> = this.route.split('/')
         const pathParts: Array<string> = path.split('/')
 

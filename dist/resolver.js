@@ -10,8 +10,8 @@ const Resolver = function Resolver(routes = [], options = {}) {
 Resolver.prototype.resolve =
     function resolve(path, method = 'ALL') {
         for (let i in this.routes) {
-            if (this.routes.isMatch(path, method)) {
-                return this.routes.getTarget();
+            if (this.routes[i].isMatch(path, method)) {
+                return this.routes[i].getTarget();
             }
         }
         return false;
