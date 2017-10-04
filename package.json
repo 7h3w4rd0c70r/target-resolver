@@ -6,6 +6,9 @@
   "engines": {
     "node": "^8.4.0"
   },
+  "repository": {
+    "url": "https://github.com/7h3w4rd0c70r/target-resolver"
+  },
   "author": "Patrik Šimunič <patriksimunic@hotmail.com>",
   "license": "MIT",
   "devDependencies": {
