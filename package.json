@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "^8.4.0"
+  },
   "author": "Patrik Šimunič <patriksimunic@hotmail.com>",
   "license": "MIT",
   "devDependencies": {
