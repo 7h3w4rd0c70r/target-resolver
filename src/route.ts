@@ -4,7 +4,7 @@ import {
     IMethod,
 } from './types'
 
-const Route = function Route(route: IRoute) {
+const Route = function Route(route: IRoute): void {
     this.route = route.route
     this.target = route.target
     this.method = route.method || 'ALL'

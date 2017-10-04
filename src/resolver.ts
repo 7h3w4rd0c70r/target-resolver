@@ -6,7 +6,7 @@ import {
 } from './types'
 import Route from './route'
 
-const Resolver = function Resolver(routes: Array<IRoute> = [ ], options: IOptions = { }) {
+const Resolver = function Resolver(routes: Array<IRoute> = [ ], options: IOptions = { }): void {
     this.routes = [ ]
 
     for (let i in routes) {
@@ -26,7 +26,7 @@ Resolver.prototype.resolve =
     }
 
 Resolver.prototype.addRoute =
-    function addRoute(route: IRoute) {
+    function addRoute(route: IRoute): void {
         this.routes.push(new Route(route))
     }
 
