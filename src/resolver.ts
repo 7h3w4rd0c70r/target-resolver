@@ -26,8 +26,10 @@ Resolver.prototype.resolve =
     }
 
 Resolver.prototype.addRoute =
-    function addRoute(route: IRoute): void {
+    function addRoute(route: IRoute) {
         this.routes.push(new Route(route))
+
+        return this
     }
 
 export default Resolver

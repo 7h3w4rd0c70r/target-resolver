@@ -19,6 +19,7 @@ Resolver.prototype.resolve =
 Resolver.prototype.addRoute =
     function addRoute(route) {
         this.routes.push(new route_1.default(route));
+        return this;
     };
 exports.default = Resolver;
 //# sourceMappingURL=resolver.js.map
