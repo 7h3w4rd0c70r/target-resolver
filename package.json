@@ -1,0 +1,11 @@
+{
+  "name": "target-resolver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Patrik Šimunič <patriksimunic@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^2.5.3"
+  }
+}
