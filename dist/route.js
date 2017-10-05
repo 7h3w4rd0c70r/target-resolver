@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const Route = function Route(route) {
     this.route = route.route;
     this.target = route.target;
-    this.secured = route.secured || true;
+    this.secured = typeof route.secured === 'boolean' ? route.secured : true;
     this.method = route.method || 'ALL';
 };
 Route.prototype.isMatch =
