@@ -23,7 +23,7 @@ Resolver.prototype.resolve =
                     route: this.routes[i].getRoute(),
                     method: this.routes[i].getMethod(),
                     target: this.routes[i].getTarget(),
-                    secured: this.routes[i].isSecured(),
+                    secured: this.routes[i].isSecure(),
                     params: this.routes[i].resolveParams(path),
                     path: path,
                 }
