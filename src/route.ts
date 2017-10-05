@@ -7,7 +7,7 @@ import {
 const Route = function Route(route: IRoute): void {
     this.route = route.route
     this.target = route.target
-    this.secured = route.secured
+    this.secured = route.secured || true
     this.method = route.method || 'ALL'
 }
 
