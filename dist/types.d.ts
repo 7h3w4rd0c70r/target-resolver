@@ -1,7 +1,12 @@
-export declare type IMethod = 'ALL' | 'GET' | 'POST' | 'PUT' | 'DELETE' | 'OPTIONS' | 'HEAD' | 'PATCH';
-export declare type IRoute = {
+export declare type Options = {};
+export declare type Method = 'ALL' | 'GET' | 'POST' | 'PUT' | 'DELETE' | 'OPTIONS' | 'HEAD' | 'PATCH';
+export declare type Route = {
     route: string;
     target: string;
-    method?: IMethod;
+    secured?: boolean;
+    method?: Method;
 };
-export declare type IOptions = {};
+export declare type Match = Route & {
+    path: string;
+    params: object;
+};

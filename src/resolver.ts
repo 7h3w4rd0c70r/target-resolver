@@ -1,8 +1,9 @@
 
 import {
-    IRoute,
-    IMethod,
-    IOptions,
+    Options as IOptions,
+    Route as IRoute,
+    Method as IMethod,
+    Match as IMatch,
 } from './types'
 import Route from './route'
 
@@ -15,10 +16,17 @@ const Resolver = function Resolver(routes: Array<IRoute> = [ ], options: IOption
 }
 
 Resolver.prototype.resolve =
-    function resolve(path: string, method: IMethod = 'ALL'): string|boolean {
+    function resolve(path: string, method: IMethod = 'ALL'): IMatch|boolean {
         for (let i in this.routes) {
             if (this.routes[i].isMatch(path, method)) {
-                return this.routes[i].getTarget()
+                return {
+                    route: this.routes[i].getRoute(),
+                    method: this.routes[i].getMethod(),
+                    target: this.routes[i].getTarget(),
+                    secured: this.routes[i].isSecured(),
+                    params: this.routes[i].resolveParams(path),
+                    path: path,
+                }
             }
         }
 

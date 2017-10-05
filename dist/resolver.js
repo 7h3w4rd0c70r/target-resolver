@@ -11,7 +11,14 @@ Resolver.prototype.resolve =
     function resolve(path, method = 'ALL') {
         for (let i in this.routes) {
             if (this.routes[i].isMatch(path, method)) {
-                return this.routes[i].getTarget();
+                return {
+                    route: this.routes[i].getRoute(),
+                    method: this.routes[i].getMethod(),
+                    target: this.routes[i].getTarget(),
+                    secured: this.routes[i].isSecured(),
+                    params: this.routes[i].resolveParams(path),
+                    path: path,
+                };
             }
         }
         return false;
